@@ -1,0 +1,18 @@
+//Um laboratório de pesquisa coleta dados de temperatura em diferentes regiões. Escreva um programa que solicite ao usuário digitar 10 valores de temperatura e, em seguida, calcule e imprima a temperatura média dessas regiões.
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int soma = 0;
+    for (int i = 0; i < 10; i++) {
+      System.out.print("Digite a temperatura: ");
+      int temperatura = scanner.nextInt();
+      soma += temperatura;
+    }
+    double media = (double) soma / 10;
+    System.out.println("A temperatura média é: " + media);
+  }
+
+
+  
+}
