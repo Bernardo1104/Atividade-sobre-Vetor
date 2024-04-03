@@ -1,0 +1,22 @@
+//Em um sistema de contabilidade, é necessário somar os valores de entrada e saída de recursos. Faça um programa que leia dois vetores com 5 elementos cada um (valores de entrada e saída) e, em seguida, calcule e imprima o saldo final.
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int[] entrada = new int[5];
+    int[] saida = new int[5];
+    int i;
+    int saldo = 0;
+    for(i = 0; i < 5; i++){
+      System.out.printf("Digite o valor de entrada do mês %d: ", i+1);
+      entrada[i] = input.nextInt();
+      System.out.printf("Digite o valor de saída do mês %d: ", i+1);
+      saida[i] = input.nextInt();
+      saldo += entrada[i] - saida[i];
+    }
+    System.out.printf("O saldo final é: %d", saldo);
+    
+  }
+
+
+}
