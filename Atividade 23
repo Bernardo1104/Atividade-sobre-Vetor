@@ -1,0 +1,25 @@
+//Faça um programa que preencha um vetor com os modelos de cinco carros (exemplos de modelos: Fusca, Gol, Vectra etc). Carregue outro vetor com o consumo desses carros, isto é, quantos quilômetros cada um deles faz com um litro de combustível. Calcule e mostre: o modelo de carro mais econômico; e quantos litros de combustível cada um dos carros cadastrados consome para percorrer uma distância de 1.000 km;
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    String[] carros = new String[5];
+    double[] consumo = new double[5];
+    double menorConsumo = 0;
+    String modeloMenorConsumo = "";
+    for (int i = 0; i < 5; i++) {
+      System.out.print("Digite o modelo do carro " + (i + 1) + ": ");
+      carros[i] = input.nextLine();
+      System.out.print("Digite o consumo do carro " + (i + 1) + " (km/l): ");
+      consumo[i] = input.nextDouble();
+      input.nextLine();
+      if (i == 0 || consumo[i] < menorConsumo) {
+        menorConsumo = consumo[i];
+        modeloMenorConsumo = carros[i];
+      }
+    }
+    System.out.println("O modelo de carro mais econômico é: " + modeloMenorConsumo);
+  }
+
+}
