@@ -1,0 +1,17 @@
+//Em um sistema de validação de dados, é importante identificar se um número é par ou ímpar. Crie uma função que receba um número inteiro como argumento e retorne True se ele for par e False se for ímpar.
+
+import java.util.Scanner; 
+public class Main {
+  public static boolean parOuimpar(int num) {
+    return num % 2 == 0;
+  }
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    System.out.println("Digite um número: ");
+    int num = input.nextInt();
+    boolean resultado = parOuimpar(num);
+    System.out.println("O número é par? " + resultado);
+    
+  }
+
+}
